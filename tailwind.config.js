@@ -22,6 +22,12 @@ module.exports = {
           900: "#242B4D",
           1000: "#151718",
         },
+        mtn: {
+          yellow: "#FFCC01",
+          pink: "#E92B79",
+          white: "#F6F6F6",
+          darkGray: "#333333",
+        },
         secondary: {
           100: "#F8F8F8",
           200: "#F1F1F1",

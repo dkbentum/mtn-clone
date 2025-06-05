@@ -19,31 +19,33 @@ type OverviewCardProps = {
 export default function OverviewCard({
   iconType,
   iconName,
-  iconColor = "#F59E0B",
+  iconColor = "black",
   iconSize = 20,
   title,
   value,
   bonus,
-  valueClassName = "text-2xl font-bold mb-1",
-  bonusClassName = "text-gray-500",
+  valueClassName = "text-lg font-bold mb-1",
+  bonusClassName = "text-gray-500 text-xs font-bold",
   onPressText,
-  onPressTextColor = "text-yellow-600",
+  onPressTextColor = "text-black text-sm font-bold",
 }: OverviewCardProps) {
   const IconComponent = iconType === "Ionicons" ? Ionicons : MaterialIcons;
 
   return (
-    <View className="w-[48%] bg-white rounded-lg p-4 mb-4 shadow-sm">
-      <View className="flex-row items-center mb-2">
+    <View className="w-[48%] h-[44%] bg-mtn-yellow rounded-lg pt-3 px-1 py-1 mb-4 shadow-sm">
+      <View className="flex-row mb-1 px-6 items-center ">
         <IconComponent
           name={iconName as any}
           size={iconSize}
           color={iconColor}
         />
-        <Text className="ml-2 font-medium">{title}</Text>
+        <Text className="ml-2 text-sm  font-bold">{title}</Text>
       </View>
-      <Text className={valueClassName}>{value}</Text>
-      {bonus && <Text className={bonusClassName}>{bonus}</Text>}
-      {onPressText && <Text className={onPressTextColor}>{onPressText}</Text>}
+      <View className=" rounded-tl-2xl rounded-br-lg rounded-bl-lg bg-mtn-white p-2">
+        <Text className={valueClassName}>{value}</Text>
+        {bonus && <Text className={bonusClassName}>{bonus}</Text>}
+        {onPressText && <Text className={onPressTextColor}>{onPressText}</Text>}
+      </View>
     </View>
   );
 }

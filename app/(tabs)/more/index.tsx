@@ -1,4 +1,9 @@
-import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import {
+  Feather,
+  FontAwesome5,
+  Ionicons,
+  MaterialIcons,
+} from "@expo/vector-icons";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function MoreScreen() {
@@ -72,7 +77,7 @@ export default function MoreScreen() {
             <Feather name="chevron-right" size={20} color="#9CA3AF" />
           </TouchableOpacity>
           <TouchableOpacity className="flex-row items-center py-3 border-b border-gray-100">
-            <Ionicons
+            <FontAwesome5
               name="sim-card"
               size={20}
               color="#F59E0B"

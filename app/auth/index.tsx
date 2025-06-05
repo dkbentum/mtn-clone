@@ -14,7 +14,11 @@ const MTNVerificationScreen = () => {
   const [isAgreed, setIsAgreed] = useState(false);
 
   // Validate phone number (starts with 7 and has 8 digits total including the 7)
-  const isValidPhoneNumber = /^7\d{7}$/.test(phoneNumber);
+  // Validate Ghana MTN numbers: 024, 025, 053, 054, 055, 059 (with or without +233)
+  // Validate Ghana MTN numbers: 024, 025, 053, 054, 055, 059 (with or without +233 or just starting with 24, 25, 53, 54, 55, 59)
+  const isValidPhoneNumber = /^((\+233|233|0)?(24|25|53|54|55|59)\d{7})$/.test(
+    phoneNumber
+  );
   const isContinueEnabled = isAgreed && isValidPhoneNumber;
 
   const handlePrivacyPolicyPress = () => {
@@ -79,9 +83,10 @@ const MTNVerificationScreen = () => {
 
         {/* Continue Button */}
         <TouchableOpacity
-          className={`p-4 rounded-lg items-center justify-center ${
-            isContinueEnabled ? "bg-yellow-500" : "bg-gray-300"
-          }`}
+          className="p-4 rounded-lg items-center justify-center"
+          style={{
+            backgroundColor: isContinueEnabled ? "#F59E0B" : "#D1D5DB", // yellow-500 or gray-300
+          }}
           disabled={!isContinueEnabled}
           onPress={() => console.log("Continue pressed")}
         >

@@ -26,10 +26,12 @@ export default function HomeScreen() {
           <View className="flex-row justify-between items-center mb-4">
             <View className="flex-row gap-3 items-center">
               <Text className="text-lg font-bold">Balances</Text>
-              <Feather name="refresh-cw" size={16} color="#D97706" />
+              <Feather name="refresh-cw" size={16} color="black" />
             </View>
             <TouchableOpacity className="flex-row items-center">
-              <Text className="text-yellow-600 mr-1">View all →</Text>
+              <Text className="text-mtn-darkGray font-bold mr-1">
+                View all →
+              </Text>
             </TouchableOpacity>
           </View>
 

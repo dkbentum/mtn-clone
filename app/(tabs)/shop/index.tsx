@@ -49,14 +49,14 @@ export default function ShopScreen() {
         {/* What Do You Need Section */}
         <View className="mb-6">
           <Text className="text-lg font-bold mb-4">What do you need?</Text>
-          <View className="flex-row flex-wrap justify-between">
+          <View className="flex-row flex-wrap  gap-2">
             {quickLinks.map((item, index) => (
               <TouchableOpacity
                 key={index}
                 className="w-[22%] items-center mb-4"
               >
-                <View className="w-16 h-16 bg-white rounded-full items-center justify-center shadow-sm mb-2">
-                  <Ionicons name="cube" size={24} color="#F59E0B" />
+                <View className="w-16 h-16 bg-mtn-darkGray rounded-full items-center justify-center shadow-sm mb-2">
+                  <Ionicons name="cube" size={24} color="white" />
                 </View>
                 <Text className="text-center text-xs">{item}</Text>
               </TouchableOpacity>

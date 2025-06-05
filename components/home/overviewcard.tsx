@@ -27,7 +27,7 @@ export default function OverviewCard({
   valueClassName = "text-lg font-bold mb-1",
   bonusClassName = "text-gray-500 text-xs font-bold",
   onPressText,
-  onPressTextColor = "text-black text-sm font-bold",
+  onPressTextColor = "text-black text-xs font-bold",
 }: OverviewCardProps) {
   const IconComponent = iconType === "Ionicons" ? Ionicons : MaterialIcons;
 

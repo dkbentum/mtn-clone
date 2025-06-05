@@ -69,7 +69,7 @@ export default function HomeScreen() {
           </View>
 
           {/* Timestamp */}
-          <Text className="text-center text-gray-500 my-4">
+          <Text className="text-center font-bold text-slate-900 my-4">
             Showing balances as at Jun 04 2025; 9:47:52 AM
           </Text>
 
@@ -82,18 +82,19 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
 
-            <View className="flex-row flex-wrap justify-between">
-              {["Data Bundle", "Just4U", "Mashup", "Contact us"].map((item) => (
-                <TouchableOpacity
-                  key={item}
-                  className="w-[48%] bg-white rounded-lg p-4 mb-4 items-center shadow-sm"
-                >
-                  <View className="w-12 h-12 bg-yellow-100 rounded-full items-center justify-center mb-2">
-                    <Ionicons name="cube" size={24} color="#F59E0B" />
+            <View className=" flex-wrap flex-row">
+              {["Data Bundle", "Just4U", "Mashup", "Contact us", "asaasas"].map(
+                (item) => (
+                  <View key={item}>
+                    <TouchableOpacity className="h-24 w-[100%] bg-mtn-darkGray justify-center rounded-xl  mb-4 items-center shadow-sm  ">
+                      <Ionicons name="cube" size={24} color="#F59E0B" />
+                      <Text className="text-center text-xs font-bold text-white">
+                        {item}
+                      </Text>
+                    </TouchableOpacity>
                   </View>
-                  <Text className="text-center">{item}</Text>
-                </TouchableOpacity>
-              ))}
+                )
+              )}
             </View>
           </View>
 

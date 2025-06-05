@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
   Image,
@@ -88,7 +89,7 @@ const MTNVerificationScreen = () => {
             backgroundColor: isContinueEnabled ? "#F59E0B" : "#D1D5DB", // yellow-500 or gray-300
           }}
           disabled={!isContinueEnabled}
-          onPress={() => console.log("Continue pressed")}
+          onPress={() => router.push("/(tabs)/home")}
         >
           <Text className="text-white font-bold text-lg">CONTINUE</Text>
         </TouchableOpacity>

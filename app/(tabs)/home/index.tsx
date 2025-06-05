@@ -82,19 +82,36 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
 
-            <View className=" flex-wrap flex-row">
-              {["Data Bundle", "Just4U", "Mashup", "Contact us", "asaasas"].map(
-                (item) => (
-                  <View key={item}>
-                    <TouchableOpacity className="h-24 w-[100%] bg-mtn-darkGray justify-center rounded-xl  mb-4 items-center shadow-sm  ">
-                      <Ionicons name="cube" size={24} color="#F59E0B" />
-                      <Text className="text-center text-xs font-bold text-white">
-                        {item}
-                      </Text>
-                    </TouchableOpacity>
+            <View className="flex-row gap-2  ">
+              {["Data Bundle", "Just4U", "Mashup", "Contact us"].map((item) => (
+                <TouchableOpacity
+                  key={item}
+                  className="w-[24%] h-24  bg-mtn-darkGray justify-center rounded-2xl  items-center shadow-sm"
+                >
+                  <View className="mb-2">
+                    <Ionicons name="cube" size={24} color="#fff" />
                   </View>
-                )
-              )}
+
+                  <Text className="text-center text-xs font-bold text-white">
+                    {item}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+
+            <View className="flex-row gap-2 mt-2 ">
+              {["Data Bundle", "Just4U"].map((item) => (
+                <TouchableOpacity
+                  key={item}
+                  className="w-[50%] flex-row h-16  bg-mtn-darkGray justify-center rounded-xl  items-center shadow-sm"
+                >
+                  <Ionicons name="cube" size={24} color="#E92B79" />
+
+                  <Text className="text-center text-xs font-bold text-white">
+                    {item}
+                  </Text>
+                </TouchableOpacity>
+              ))}
             </View>
           </View>
 

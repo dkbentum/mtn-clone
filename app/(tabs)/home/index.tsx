@@ -3,24 +3,24 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <View className="flex-1 bg-gray-50">
+    <View className="flex-1 bg-yellow-500 ">
       {/* Header */}
-      <View className="bg-yellow-500 pt-14 pb-4 px-4">
-        <View className="flex-row items-center justify-between mb-4">
-          <View className="flex-row items-center">
-            <View className="w-10 h-10 rounded-full border-2 border-white items-center justify-center">
-              <Text className="text-white font-bold">MTN</Text>
+      <View className=" pt-20 pb-4 px-4">
+        <View className="flex-row items-center justify-between mb-2">
+          <View className="flex-row  items-center">
+            <View className="w-10 h-10  rounded-full border-2 border-white items-center justify-center">
+              <Text className="text-white text-sm font-bold">MTN</Text>
             </View>
-            <Text className="ml-3 text-white text-lg">
-              <Text className="font-bold">Yo!</Text> ISAAC
-            </Text>
           </View>
+          <Text className="ml-3 text-white text-lg">
+            <Text className="font-bold">Yo!</Text> ISAAC
+          </Text>
           <Ionicons name="chatbubble-ellipses" size={24} color="white" />
         </View>
       </View>
 
       {/* Balances Section */}
-      <ScrollView className="flex-1">
+      <ScrollView className="flex-1 rounded-tr-3xl bg-slate-50 ">
         <View className="px-4 pt-4">
           <View className="flex-row justify-between items-center mb-4">
             <Text className="text-lg font-bold">Balances</Text>

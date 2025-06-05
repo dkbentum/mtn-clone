@@ -1,4 +1,5 @@
-import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import OverviewCard from "@/components/home/overviewcard";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function HomeScreen() {
@@ -27,53 +28,42 @@ export default function HomeScreen() {
               <Text className="text-lg font-bold">Balances</Text>
               <Feather name="refresh-cw" size={16} color="#D97706" />
             </View>
-
             <TouchableOpacity className="flex-row items-center">
               <Text className="text-yellow-600 mr-1">View all →</Text>
             </TouchableOpacity>
           </View>
 
           {/* Balance Cards Grid */}
+
           <View className="flex-row flex-wrap justify-between">
-            {/* Airtime Card */}
-            <View className="w-[48%] bg-white rounded-lg p-4 mb-4 shadow-sm">
-              <View className="flex-row items-center mb-2">
-                <Ionicons name="call" size={20} color="#F59E0B" />
-                <Text className="ml-2 font-medium">AIRTIME</Text>
-              </View>
-              <Text className="text-2xl font-bold mb-1">GHS 4.17</Text>
-              <Text className="text-gray-500">BONUS:</Text>
-            </View>
-
-            {/* SMS Card */}
-            <View className="w-[48%] bg-white rounded-lg p-4 mb-4 shadow-sm">
-              <View className="flex-row items-center mb-2">
-                <MaterialIcons name="sms" size={20} color="#F59E0B" />
-                <Text className="ml-2 font-medium">SMS</Text>
-              </View>
-              <Text className="text-2xl font-bold mb-1">491 SMS</Text>
-              <Text className="text-gray-500">BONUS:</Text>
-            </View>
-
-            {/* Data Card */}
-            <View className="w-[48%] bg-white rounded-lg p-4 shadow-sm">
-              <View className="flex-row items-center mb-2">
-                <Ionicons name="wifi" size={20} color="#F59E0B" />
-                <Text className="ml-2 font-medium">DATA</Text>
-              </View>
-              <Text className="text-2xl font-bold mb-1">1.51 GB</Text>
-              <Text className="text-gray-500">BONUS: 0 MB</Text>
-            </View>
-
-            {/* Broadband Card */}
-            <View className="w-[48%] bg-white rounded-lg p-4 shadow-sm">
-              <View className="flex-row items-center mb-2">
-                <Ionicons name="desktop" size={20} color="#F59E0B" />
-                <Text className="ml-2 font-medium">BROADBAND</Text>
-              </View>
-              <Text className="text-lg font-bold mb-1">GET CONNECTED</Text>
-              <Text className="text-yellow-600">CLICK HERE</Text>
-            </View>
+            <OverviewCard
+              iconType="Ionicons"
+              iconName="call"
+              title="AIRTIME"
+              value="GHS 4.17"
+              bonus="BONUS:"
+            />
+            <OverviewCard
+              iconType="MaterialIcons"
+              iconName="sms"
+              title="SMS"
+              value="491 SMS"
+              bonus="BONUS:"
+            />
+            <OverviewCard
+              iconType="Ionicons"
+              iconName="wifi"
+              title="DATA"
+              value="1.51 GB"
+              bonus="BONUS: 0 MB"
+            />
+            <OverviewCard
+              iconType="Ionicons"
+              iconName="desktop"
+              title="BROADBAND"
+              value="GET CONNECTED"
+              onPressText="CLICK HERE"
+            />
           </View>
 
           {/* Timestamp */}

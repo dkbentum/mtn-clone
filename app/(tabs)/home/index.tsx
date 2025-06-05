@@ -23,10 +23,13 @@ export default function HomeScreen() {
       <ScrollView className="flex-1 rounded-tr-3xl bg-slate-50 ">
         <View className="px-4 pt-4">
           <View className="flex-row justify-between items-center mb-4">
-            <Text className="text-lg font-bold">Balances</Text>
+            <View className="flex-row gap-3 items-center">
+              <Text className="text-lg font-bold">Balances</Text>
+              <Feather name="refresh-cw" size={16} color="#D97706" />
+            </View>
+
             <TouchableOpacity className="flex-row items-center">
               <Text className="text-yellow-600 mr-1">View all →</Text>
-              <Feather name="refresh-cw" size={16} color="#D97706" />
             </TouchableOpacity>
           </View>
 

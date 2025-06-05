@@ -1,12 +1,9 @@
-import React from "react";
 import { Text, View } from "react-native";
 
-const MorePage = () => {
+export default function MoreScreen() {
   return (
-    <View>
-      <Text>MorePage</Text>
+    <View className="flex-1 bg-gray-50 justify-center items-center">
+      <Text className="text-2xl font-bold">More Screen</Text>
     </View>
   );
-};
-
-export default MorePage;
+}

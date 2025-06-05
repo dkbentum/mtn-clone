@@ -53,7 +53,7 @@ const MTNVerificationScreen = () => {
               keyboardType="phone-pad"
               value={phoneNumber}
               onChangeText={setPhoneNumber}
-              maxLength={8}
+              maxLength={10}
             />
           </View>
         </View>

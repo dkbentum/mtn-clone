@@ -70,7 +70,7 @@ export default function HomeScreen() {
 
           {/* Timestamp */}
           <Text className="text-center font-bold text-slate-900 my-4">
-            Showing balances as at Jun 04 2025; 9:47:52 AM
+            Showing balances as at Jun 19 2025; 9:47:52 AM
           </Text>
 
           {/* Quick Access */}
